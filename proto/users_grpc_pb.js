@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 'use strict';
-var grpc = require('grpc');
+var grpc = require('@grpc/grpc-js');
 var users_pb = require('./users_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 
@@ -53,14 +53,14 @@ var UsersService = exports.UsersService = {
   },
   createUser: {
     path: '/users.Users/CreateUser',
-    requestStream: true,
+    requestStream: false,
     responseStream: false,
     requestType: users_pb.User,
-    responseType: google_protobuf_empty_pb.Empty,
+    responseType: users_pb.User,
     requestSerialize: serialize_users_User,
     requestDeserialize: deserialize_users_User,
-    responseSerialize: serialize_google_protobuf_Empty,
-    responseDeserialize: deserialize_google_protobuf_Empty,
+    responseSerialize: serialize_users_User,
+    responseDeserialize: deserialize_users_User,
   },
   getUsers: {
     path: '/users.Users/GetUsers',
@@ -72,6 +72,28 @@ var UsersService = exports.UsersService = {
     requestDeserialize: deserialize_google_protobuf_Empty,
     responseSerialize: serialize_users_User,
     responseDeserialize: deserialize_users_User,
+  },
+  updateUser: {
+    path: '/users.Users/UpdateUser',
+    requestStream: false,
+    responseStream: false,
+    requestType: users_pb.User,
+    responseType: users_pb.User,
+    requestSerialize: serialize_users_User,
+    requestDeserialize: deserialize_users_User,
+    responseSerialize: serialize_users_User,
+    responseDeserialize: deserialize_users_User,
+  },
+  deleteUser: {
+    path: '/users.Users/DeleteUser',
+    requestStream: false,
+    responseStream: false,
+    requestType: users_pb.UserRequest,
+    responseType: google_protobuf_empty_pb.Empty,
+    requestSerialize: serialize_users_UserRequest,
+    requestDeserialize: deserialize_users_UserRequest,
+    responseSerialize: serialize_google_protobuf_Empty,
+    responseDeserialize: deserialize_google_protobuf_Empty,
   },
 };
 

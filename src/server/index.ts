@@ -1,5 +1,5 @@
-import { Server, ServerCredentials } from "grpc";
-import { UsersService } from "../proto/users_grpc_pb";
+import { Server, ServerCredentials } from "@grpc/grpc-js";
+import { UsersService } from "../../proto/users_grpc_pb";
 import { UsersServer } from "./services";
 
 const server = new Server();
